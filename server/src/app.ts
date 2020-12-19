@@ -20,15 +20,11 @@ app.use(helmet());
 app.get('/', (_, res) => {
   res.status(200);
   res.json({
-    message: 'Welcome to the API for the playground toolkit 🧰!',
+    message: 'Welcome to the API for the Twitch User ID Finder!',
   });
 });
 
 app.use('/api/v1', apiRouter);
-
-const swaggerSpecs = swaggerJSDoc(swaggerJSDocConfig);
-app.use('/docs', swaggerUI.serve);
-app.get('/docs', swaggerUI.setup(swaggerSpecs, { explorer: true }));
 
 app.use(notFoundHandler);
 app.use(errorHandler);

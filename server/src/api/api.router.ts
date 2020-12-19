@@ -1,16 +1,8 @@
 import { Router } from 'express';
-
-import youtubeRouter from './youtube/youtube.router';
+import userIdController from './v1/user-id.controller';
 
 const apiRouter = Router();
 
-/**
- * @swagger
- * tags:
- *   -  name: YouTube
- *      description: Routes for YouTube data
- */
-
-apiRouter.use('/youtube', youtubeRouter);
+apiRouter.post('/user-id', userIdController);
 
 export default apiRouter;
