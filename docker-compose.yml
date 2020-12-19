@@ -1,0 +1,10 @@
+version: '3.8'
+services: 
+  redis:
+    image: redis
+    restart: always
+  pg-backend:
+    image: node
+    restart: always
+    ports: 
+      - 9000:9000

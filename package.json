@@ -1,0 +1,18 @@
+{
+  "name": "twitch-user-id-finder",
+  "version": "1.0.0",
+  "description": "Code for the website to find twitch user id and make your development process much easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lerna run dev --stream",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+  },
+  "author": "C0dingWithFun",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {}
+}
