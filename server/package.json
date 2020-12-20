@@ -5,14 +5,6 @@
   "author": "Coding With Fun <admin@codingwith.fun>",
   "homepage": "https://github.com/C0dingWithFun/playground#readme",
   "license": "ISC",
-  "main": "src/index.ts",
-  "directories": {
-    "src": "src",
-    "test": "__tests__"
-  },
-  "files": [
-    "src"
-  ],
   "engines": {
     "node": "14.x"
   },
@@ -22,7 +14,8 @@
   },
   "scripts": {
     "test": "jest --setupFiles dotenv/config",
-    "build": "tsc src/index.ts && node dist/index.js",
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
     "dev": "nodemon --watch src/ -e ts --exec \"ts-node src/index.ts\""
   },
   "bugs": {
