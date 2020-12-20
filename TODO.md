@@ -1,4 +1,5 @@
 # TODOs:
 
 - [ ] Complete README
-- [ ] cache responses from API - Username<key>, ID<value>
+- [x] cache responses from API - Username<key>, ID<value>
+- [x] update cors settings

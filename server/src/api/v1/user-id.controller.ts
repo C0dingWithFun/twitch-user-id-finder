@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import fetch from 'node-fetch';
+import redisClient from 'src/redis.db';
 import {
   __TWITCH_CLIENT_ID__,
   __TWITCH_CLIENT_SECRET__,
@@ -35,14 +36,22 @@ const userIdController = async (
       })
         .then((res) => res.json())
         .then(async (stats) => {
+          const response = {
+            loginName,
+            userId: stats?.data[0]?.id,
+            stats: stats?.data[0],
+          };
           res.status(200);
           res.json({
-            data: {
-              loginName,
-              userId: stats?.data[0]?.id,
-              stats: stats?.data[0],
-            },
+            data: response,
+            message: 'Successfully fetched the Twitch User ID',
           });
+
+          redisClient.setex(
+            loginName,
+            30 * 24 * 60 * 60,
+            JSON.stringify(response)
+          );
         })
         .catch((err) => next(err));
     })
