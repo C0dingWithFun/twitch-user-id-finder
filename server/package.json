@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest --setupFiles dotenv/config",
     "build": "tsc",
-    "start": "tsc && node dist/index.js",
+    "start": "node dist/index.js",
     "dev": "nodemon --watch src/ -e ts --exec \"ts-node src/index.ts\""
   },
   "bugs": {
