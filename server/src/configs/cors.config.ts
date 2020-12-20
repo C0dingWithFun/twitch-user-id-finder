@@ -5,7 +5,7 @@ import { __PROD__ } from '../constants';
 const corsOptions: CorsOptions = {
   origin: __PROD__
     ? ['https://twitch-user-id-finder.vercel.app']
-    : ['http://localhost:4000'],
+    : ['http://localhost:8081'],
   methods: ['GET', 'POST'],
 };
 

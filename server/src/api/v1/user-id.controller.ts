@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import fetch from 'node-fetch';
-import redisClient from 'src/redis.db';
+import redisClient from '../../redis.db';
 import {
   __TWITCH_CLIENT_ID__,
   __TWITCH_CLIENT_SECRET__,

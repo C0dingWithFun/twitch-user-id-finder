@@ -7,7 +7,7 @@ const userIdCacheMiddleware = (
   next: NextFunction
 ) => {
   if (req.body?.loginName && req.body?.loginName.trim()) {
-    const loginName = req.body?.loginName.toString().trim();
+    const loginName = req.body?.loginName.trim();
     redisClient.get(loginName, (err, data) => {
       if (err) {
         next(err);
