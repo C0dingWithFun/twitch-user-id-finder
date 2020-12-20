@@ -13,6 +13,9 @@
   "files": [
     "src"
   ],
+  "engines": {
+    "node": "14.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/C0dingWithFun/playground.git"
